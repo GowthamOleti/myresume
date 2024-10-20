@@ -30,10 +30,12 @@
             color: #1d1d1f;
         }
         h1 {
-            font-size: 28px;
+            font-size: 32px;
+            margin-bottom: 5px;
         }
         h2 {
             font-size: 20px;
+            margin-bottom: 10px;
         }
         h3 {
             font-size: 16px;
@@ -42,12 +44,19 @@
         }
         .header {
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
         .header p {
-            margin: 0;
-            font-size: 16px;
+            margin: 5px 0;
             line-height: 1.5;
+        }
+        .header .degree {
+            font-weight: 500; /* Less bold than before */
+            font-size: 18px;
+        }
+        .header .contact-info {
+            font-size: 15px; /* Slightly larger font size for better visibility */
+            line-height: 1.6;
         }
         a {
             color: #0071e3;
@@ -57,11 +66,12 @@
             text-decoration: underline;
         }
         ul {
-            list-style: none;
-            padding: 0;
+            list-style: disc;
+            padding-left: 20px;
         }
         li {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+            font-weight: 300; /* Make bullet points less bold */
         }
         p {
             margin: 10px 0;
@@ -82,54 +92,98 @@
 <body>
     <div class="container">
         
-        <div class="header" style="margin-top: -20px;">
+        <div class="header">
             <h1>Gowtham Oleti</h1>
-            <p style="font-weight: 500; margin-top: 10px;">B.Des Product Design</p>
-            <p>Email: <a href="mailto:oletigowtham8803@gmail.com?subject=Hi Gowtham, I've just seen your resume...">oletigowtham8803@gmail.com</a> | Phone: 9848211136</p>
-            <p>Portfolio: <a href="https://www.gowthamoleti.com">gowthamoleti.com</a> | LinkedIn: <a href="https://www.linkedin.com/in/gowthamoleti/">linkedin.com/GowthamOleti</a></p>
+            <p class="degree">B.Des Product Design</p>
+            <p class="contact-info">
+                Email: <a href="mailto:oletigowtham8803@gmail.com?subject=Hi Gowtham, I've just seen your resume...">oletigowtham8803@gmail.com</a> | Phone: 9848211136<br>
+                Portfolio: <a href="https://www.gowthamoleti.com">gowthamoleti.com</a> | LinkedIn: <a href="https://www.linkedin.com/in/gowthamoleti/">linkedin.com/GowthamOleti</a>
+            </p>
         </div>
-        <div class="section" style="text-align: center; margin-top: -10px;">
+
+        <div class="section" style="text-align: center; margin-top: 20px;">
             <p>Product Designer with a strong foundation in UX/UI, passionate about creating user-centered designs. Seeking opportunities to collaborate with forward-thinking teams to bring innovative design solutions to life.</p>
         </div>
-        <div class="section" style="margin-top: 20px; "><h2 style="border-bottom: 1px solid #e0e0e5; padding-bottom: 10px;">Experience</h2>
-            <ul>
-                <li><strong>UX Design Intern</strong> - Mouse & Cheese <span style="float: right; font-weight: bold;">(June 2024 - Present)</span><br>Noida, India</li>
-                <p>Assess, research, and redesign interfaces of existing products, focusing on user journey, behavior, and interactions to identify and solve design problems within a fast-track sprint model. Develop innovative design solutions and explore the next evolution in web and mobile experience design through interactive and immersive elements.</p>
-                <li><strong>Product Design Intern</strong> - Evaltrix <span style="float: right; font-weight: bold;">(Jan 2024 - Sept 2024)</span><br>Hyderabad, India</li>
-                <p>Evaltrix is a SaaS application used by companies to evaluate job applicants. As a UX Design Intern, my role focused on interface design improvements, usability testing, and seamlessly integrating Generative AI features, supporting the goal of creating an intuitive and efficient experience for both companies and candidates.</p>
-            </ul>
+
+        <div class="section" style="margin-top: 20px;">
+            <h2 style="border-bottom: 1px solid #e0e0e5; padding-bottom: 10px;">Experience</h2>
+            <div style="margin-bottom: 10px;">
+                <strong>UX Design Intern</strong> - Mouse & Cheese <span style="float: right; font-weight: bold;">(June 2024 - Present)</span> - Noida, India
+                <ul style="margin-top: 10px;">
+                    <li>Assessed and redesigned interfaces of existing mobile applications and websites.</li>
+                    <li>Focused on user journey, behavior, and interactions to identify and solve design problems.</li>
+                    <li>Worked within a fast-track sprint model.</li>
+                    <li>Explored new evolutions in web and mobile experience design through interactive and immersive elements.</li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <strong>Product Design Intern</strong> - Evaltrix <span style="float: right; font-weight: bold;">(Jan 2024 - Sept 2024)</span> - Hyderabad, India
+                <ul style="margin-top: 10px;">
+                    <li>Evaltrix is a SaaS application used by companies to evaluate job applicants.</li>
+                    <li>Focused on interface design improvements.</li>
+                    <li>Conducted usability testing to enhance user experience.</li>
+                    <li>Designed Generative AI features to generate questions for assessments.</li>
+                </ul>
+            </div>
         </div>
+
         <div class="section" style="margin-top: 40px;">
             <h2 style="border-bottom: 1px solid #e0e0e5; padding-bottom: 10px;">Notable Projects</h2>
-            <ul>
-                <li><strong>Archives By Gow - Resource Hub</strong> <span style="float: right; font-weight: bold;">(July 2024 - Sept 2024)</span>
-                    <p>Created a platform offering resources like videos, podcasts, tools, and blogs, focusing on influential figures in design and tech. Implemented a freemium model to provide valuable content to a wide audience while offering premium insights.</p>
-                    <p><a href="https://dips-frontend.vercel.app/">Project link</a></p>
-                    <p><em>Skills Used: UX/UI Design, User Research, Product Strategy, Web Design</em></p>
-                </li>
-                <li><strong>DIPS - Internal Note-taking and To-do List Web App</strong> <span style="float: right; font-weight: bold;">(Sept 2024 - Oct 2024)</span>
-                    <p>Designed an internal note-taking and to-do list web app with tag-based organization, AI-powered summarization, and advanced search capabilities to streamline workflows and enhance productivity.</p>
-                    <p><a href="https://dips-frontend.vercel.app/">Project link</a></p>
-                    <p><em>Skills Used: UX/UI Design, User Research, Product Strategy, AI Framework Design</em></p>
-                </li>
-                <li><strong>Recipro - AI Recipe Generator App</strong> <span style="float: right; font-weight: bold;">(Oct 2023 - Dec 2023)</span>
-                    <p>An AI application that generates food recipes based on the user's cooking skills. Built on React Native, this app tailors recipes to suit different levels of cooking experience, providing an intuitive user experience.</p>
-                    <p><a href="https://github.com/GowthamOleti/Recipro">Project link</a></p>
-                    <p><em>Skills Used: React Native, Mobile App Development, UX/UI Design, AI Integration, Interaction Design</em></p>
-                </li>
-                <li><strong>Text Craft - AI Text Summariser App. Available on PlayStore. </strong> <span style="float: right; font-weight: bold;">(June 2023 - Sept 2023)</span>
-                    <p>Designed an AI-powered app that efficiently summarizes lengthy texts. Developed with a focus on maintaining guidelines for app publication. Available on the Play Store.</p>
-                    <p><a href="https://play.google.com/store/apps/details?id=com.tk.textcraft">Project link</a></p>
-                    <p><em>Skills Used: UX/UI Design, Information Architecture, Interaction Design, AI Integration</em></p>
-                </li>
-                <li><strong>UniFood - Campus Food Discovery App</strong> <span style="float: right; font-weight: bold;">(April 2023 - Oct 2023)</span>
-                    <p>A food discovery platform tailored for students at Lovely Professional University, aimed at organizing food stall information and offering personalized suggestions. The app also allowed students to pre-order meals and engage with vendors.</p>
-                    <p><a href="https://gowthamoleti.com/unifood">Project link</a></p>
-                    <p><em>Skills Used: UX Research, Prototyping, AI-Powered Personalization, User Testing</em></p>
-                </li>
-            </ul>
+            <div style="margin-bottom: 10px;">
+                <strong>Archives By Gow - Resource Hub</strong> <span style="float: right; font-weight: bold;">(July 2024 - Sept 2024)</span>
+                <ul style="margin-top: 10px;">
+                    <li>Created a platform offering resources like videos, podcasts, tools, and blogs.</li>
+                    <li>Focused on influential figures in design and tech.</li>
+                    <li>Implemented a freemium model to provide valuable content to a wide audience.</li>
+                    <li>Attracted over 1500 monthly users.</li>
+                    <li>Skills Used: UX/UI Design, User Research, Product Strategy, Web Design.</li>
+                    <li><a href="https://dips-frontend.vercel.app/">Project link</a></li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <strong>DIPS - Internal Note-taking and To-do List Web App</strong> <span style="float: right; font-weight: bold;">(Sept 2024 - Oct 2024)</span>
+                <ul style="margin-top: 10px;">
+                    <li>Designed an internal note-taking and to-do list web app.</li>
+                    <li>Incorporated tag-based organization, AI-powered summarization, and advanced search capabilities.</li>
+                    <li>Aimed to streamline workflows and enhance productivity.</li>
+                    <li>Skills Used: UX/UI Design, User Research, Product Strategy, AI Framework Design.</li>
+                    <li><a href="https://dips-frontend.vercel.app/">Project link</a></li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <strong>Recipro - AI Recipe Generator App</strong> <span style="float: right; font-weight: bold;">(Oct 2023 - Dec 2023)</span>
+                <ul style="margin-top: 10px;">
+                    <li>AI application that generates food recipes based on the user's cooking skills.</li>
+                    <li>Built on React Native for an intuitive user experience.</li>
+                    <li>Tailored recipes to suit different levels of cooking experience.</li>
+                    <li>Skills Used: React Native, Mobile App Development, UX/UI Design, AI Integration, Interaction Design.</li>
+                    <li><a href="https://github.com/GowthamOleti/Recipro">Project link</a></li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <strong>Text Craft - AI Text Summariser App. Available on PlayStore.</strong> <span style="float: right; font-weight: bold;">(June 2023 - Sept 2023)</span>
+                <ul style="margin-top: 10px;">
+                    <li>Designed an AI-powered app that efficiently summarizes lengthy texts.</li>
+                    <li>Focused on maintaining guidelines for app publication.</li>
+                    <li>Beta tested with 150 users to gather feedback and improve functionality.</li>
+                    <li>Skills Used: UX/UI Design, Information Architecture, Interaction Design, AI Integration.</li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.tk.textcraft">Project link</a></li>
+                </ul>
+            </div>
+            <div style="margin-bottom: 10px;">
+                <strong>UniFood - Campus Food Discovery App</strong> <span style="float: right; font-weight: bold;">(April 2023 - Oct 2023)</span>
+                <ul style="margin-top: 10px;">
+                    <li>A food discovery platform tailored for students at Lovely Professional University.</li>
+                    <li>Aimed at organizing food stall information and offering personalized suggestions.</li>
+                    <li>Allowed students to pre-order meals and engage with vendors.</li>
+                    <li>Skills Used: UX Research, Prototyping, AI-Powered Personalization, User Testing.</li>
+                    <li><a href="https://gowthamoleti.com/unifood">Project link</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="section" style="margin-top: 10px;"><h2 style="border-bottom: 1px solid #e0e0e5; padding-bottom: 10px;">Skills and Interests</h2>
+
+        <div class="section" style="margin-top: 10px;">
+            <h2 style="border-bottom: 1px solid #e0e0e5; padding-bottom: 10px;">Skills and Interests</h2>
             <div class="skills-table" style="margin-top: 0;">
                 <div class="skills-column">
                     <ul>
@@ -155,6 +209,7 @@
                 </div>
             </div>
         </div>
+
         <div class="section" style="margin-top: 20px;">
             <h2 style="border-bottom: 1px solid #e0e0e5; padding-bottom: 10px;">Certifications</h2>
             <div class="skills-table" style="margin-top: 0;">
@@ -177,15 +232,8 @@
                         <li><strong>Meta</strong> - Foundations of Augmented Reality</li>
                         <li><strong>Coursera</strong> - Create a No-code Responsive Website with Webflow</li>
                         <li><strong>Google</strong> - Introduction to Generative AI</li>
-                       
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-                <div class="skills-column">
-                    <ul>
-                        
+                        <li><strong>Interaction Design Foundation</strong> - Human-Computer Interaction</li>
+                        <li><strong>Google</strong> - UX Design Professional Certificate</li>
                     </ul>
                 </div>
             </div>
@@ -193,4 +241,3 @@
     </div>
 </body>
 </html>
-
