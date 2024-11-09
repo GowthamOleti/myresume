@@ -35,7 +35,7 @@
             font-size: 32px;
             margin-bottom: 5px;
             margin-top: -10px; /* Moved slightly higher */
-            color: #ffffff; /* White color for heading */
+            color: #1d1d1f; /* White color for heading in dark mode */
         }
         h2 {
             font-size: 20px;
@@ -102,25 +102,62 @@
         .dark-mode a {
             color: #4ba3f7;
         }
+        .dark-mode h1 {
+            color: #ffffff; /* White color for heading in dark mode */
+        }
         .dark-mode-toggle {
             position: fixed;
             top: 20px;
             right: 20px;
-            background-color: #0071e3;
-            color: #ffffff;
-            border: none;
-            padding: 10px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s;
         }
-        .dark-mode-toggle:hover {
-            background-color: #005bb5;
+        .dark-mode-switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        .dark-mode-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 18px;
+            width: 18px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #0071e3;
+        }
+        input:checked + .slider:before {
+            transform: translateX(26px);
         }
     </style>
 </head>
 <body>
-    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    <div class="dark-mode-toggle">
+        <label class="dark-mode-switch">
+            <input type="checkbox" onclick="toggleDarkMode()">
+            <span class="slider"></span>
+        </label>
+    </div>
     <div class="container">
         
         <div class="header">
@@ -281,4 +318,3 @@
     </script>
 </body>
 </html>
-
