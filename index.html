@@ -17,55 +17,114 @@
             background-color: #f9f9f9;
             font-size: 14px;
             color: #1c1c1e;
+            line-height: 1.6; /* Slightly increased line-height */
         }
         .container {
             max-width: 850px;
-            margin: 20px auto;
+            margin: 5px auto;
             background-color: #ffffff;
-            padding: 30px;
+            padding: 25px;
             border-radius: 16px;
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
         }
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            text-align: center;
-            color: #1c1c1e;
-            margin-bottom: 5px;
+        .header {
+            text-align: left;
+            padding: 5px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
-        .header p {
+        .header .profile {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #d9f1ff, #a3d4f7);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+        .header .profile img {
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+            object-fit: cover;
+            display: block;
+        }
+        .header .main-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 2px;
+        }
+        .header .details {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .header h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1c1c1e;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            line-height: normal; /* Retain default line-height */
+        }
+        .header .subtitle {
             font-size: 14px;
             font-weight: 500;
             color: grey;
-            text-align: center;
-            margin: 5px 0;
+            line-height: normal; /* Retain default line-height */
+        }
+        .header .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            font-size: 14px;
+            color: #888888;
+        }
+        .header .contact-info div {
+            margin-bottom: 1px;
+            line-height: normal; /* Retain default line-height */
+        }
+        .header .contact-info a {
+            color: #007aff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .header .contact-info a:hover {
+            text-decoration: underline;
         }
         h2 {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 500;
-            margin-bottom: 15px;
+            margin-bottom: 6px;
             border-bottom: 1px solid #d3d3d3;
-            padding-bottom: 5px;
+            padding-bottom: 3px;
             color: #000000;
+            line-height: 1.4; /* Slightly increased line-height for headings */
         }
         h2 .material-icons-outlined {
             vertical-align: middle;
-            font-size: 22px;
-            margin-right: 8px;
+            font-size: 20px;
+            margin-right: 6px;
             color: #808080;
         }
         h3 {
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-bottom: 4px;
             color: #1c1c1e;
+            line-height: 1.4; /* Slightly increased line-height for headings */
         }
         a {
             color: #007aff;
             text-decoration: none;
             font-weight: 600;
-            margin-top: 10px;
+            margin-top: 4px;
             display: inline-block;
         }
         a:hover {
@@ -73,41 +132,43 @@
         }
         ul {
             list-style: disc;
-            padding-left: 20px;
-            margin: 10px 0;
+            padding-left: 18px;
+            margin: 4px 0;
+            line-height: 1.6; /* Slightly increased line-height */
         }
         li {
-            margin-bottom: 10px;
-            line-height: 1.8;
+            margin-bottom: 2px;
+            line-height: 1.6; /* Slightly increased line-height */
             color: #333333;
         }
         p {
-            margin: 10px 0;
-            line-height: 1.6;
+            margin: 4px 0;
+            line-height: 1.6; /* Slightly increased line-height */
             color: #1c1c1e;
         }
         .section {
-            margin-top: 30px;
+            margin-top: 15px;
         }
         .experience {
             display: grid;
             grid-template-columns: auto 150px;
-            gap: 20px;
+            gap: 8px;
             align-items: start;
-            margin-bottom: 30px;
+            margin-bottom: 12px;
         }
         .experience-title {
             font-weight: 600;
         }
         .experience-dates {
-            font-size: 14px;
-            color: #888888;
+            font-size: 12px;
+            font-weight: bold;
+            color: black;
             text-align: right;
         }
         .skills-certifications {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 8px;
         }
         .certification {
             display: flex;
@@ -115,45 +176,50 @@
             align-items: center;
         }
         .education-entry {
-            margin-bottom: 20px;
+            margin-bottom: 8px;
         }
         .education-entry .experience {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            gap: 5px;
+            align-items: baseline;
+            gap: 8px;
         }
         .education-entry .experience-title {
-            display: inline-block;
-            flex: 1;
-        }
-        .education-entry .experience {
-            gap: 10px;
-        }
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 0.5px;
-            background-color: #d3d3d3;
-            top: 0;
-            bottom: 0;
-            left: 20px;
-            margin-left: -0.25px;
+            flex-grow: 1;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>Gowtham Oleti</h1>
-            <p style="font-size: 22px; font-weight: 600; text-align: center;">Product Designer</p>
-            <p>Email: <a href="mailto:oletigowtham8803@gmail.com">oletigowtham8803@gmail.com</a> | Phone: 9848211136</p>
-            <p>Portfolio: <a href="https://www.gowthamoleti.com">gowthamoleti.com</a> | LinkedIn: <a href="https://www.linkedin.com/in/gowthamoleti">linkedin.com/in/gowthamoleti</a></p>
+            <div class="profile">
+                <img src="https://static.wixstatic.com/media/5c0589_f71b4cbdb69f46eda6d6c9126790736c~mv2.png" alt="Profile Picture">
+            </div>
+            <div class="main-info">
+                <div class="details">
+                    <h1 style="display: flex; align-items: center;">
+                        Gowtham Oleti
+                    </h1>
+                    <p class="subtitle">Product Designer</p>
+                </div>
+                <div class="contact-info">
+                    <div>
+                        <span>Email: <a href="mailto:oletigowtham8803@gmail.com">oletigowtham8803@gmail.com</a></span>
+                        <span>Phone: <a href="tel:9848211136">9848211136</a></span>
+                    </div>
+                    <div>
+                        <span>Portfolio: <a href="https://www.gowthamoleti.com" target="_blank">gowthamoleti.com</a></span>
+                        <span>LinkedIn: <a href="https://www.linkedin.com/in/gowthamoleti" target="_blank">linkedin.com/in/gowthamoleti</a></span>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="section">
             <h2><span class="material-icons-outlined">description</span>Summary</h2>
-            <p>Product Designer specializing in UX/UI with a focus on user-centered design and effective problem-solving. Skilled in creating intuitive, functional products that enhance user experience. Passionate about combining innovative design thinking with technology to build impactful and user-focused solutions.</p>
+            <p>
+                Product Designer specializing in UX/UI with a focus on user-centered design and effective problem-solving. Skilled in creating intuitive, functional products that enhance user experience. Passionate about combining innovative design thinking with technology to build impactful and user-focused solutions.
+            </p>
         </div>
 
         <div class="section">
@@ -179,9 +245,9 @@
             </div>
             <div class="experience">
                 <div>
-                    <span class="experience-title">Mouse & Cheese Design Studio (P) Limited</span> - <span style='font-weight: 500; color: grey;'>Product Design Intern</span>
+                    <span class="experience-title">Mouse & Cheese Design Studio</span> - <span style='font-weight: 500; color: grey;'>Product Design Intern</span>
                     <ul>
-                        <li>Assessed and redesigned interfaces of existing mobile applications and websites such as news application, E-Commerce, and more.</li>
+                        <li>Assessed and redesigned interfaces of existing mobile applications and websites such as news applications, E-Commerce, and more.</li>
                         <li>Focused on user journey, behavior, and interactions to identify and solve design problems.</li>
                         <li>Built an internal management system within the company, improving efficiency and product delivery by 40%.</li>
                     </ul>
@@ -205,20 +271,26 @@
             <h2><span class="material-icons-outlined">school</span>Education</h2>
             <div class="education-entry">
                 <div class="experience">
-                    <span class="experience-title">Lovely Professional University - <span style='font-weight: 500; color: grey;'>B.Des Product Design (Grade: 8.4)</span></span>
-                    <span class="experience-dates">Aug 2021 - Apr 2025</span>
+                    <div class="experience-title">
+                        Lovely Professional University - <span style="font-weight: 500; color: grey;">B.Des Product Design (Grade: 8.4)</span>
+                    </div>
+                    <div class="experience-dates">Aug 2021 - Apr 2025</div>
                 </div>
             </div>
             <div class="education-entry">
                 <div class="experience">
-                    <span class="experience-title">Sri Chaitanya College of Education - <span style='font-weight: 500; color: grey;'>Intermediate, MPC</span></span>
-                    <span class="experience-dates">Jun 2019 - May 2021</span>
+                    <div class="experience-title">
+                        Sri Chaitanya College of Education - <span style="font-weight: 500; color: grey;">Intermediate, MPC</span>
+                    </div>
+                    <div class="experience-dates">Jun 2019 - May 2021</div>
                 </div>
             </div>
             <div class="education-entry">
                 <div class="experience">
-                    <span class="experience-title">Sanghamitra School - <span style='font-weight: 500; color: grey;'>CBSE</span></span>
-                    <span class="experience-dates">Jun 2008 - May 2019</span>
+                    <div class="experience-title">
+                        Sanghamitra School - <span style="font-weight: 500; color: grey;">CBSE</span>
+                    </div>
+                    <div class="experience-dates">Jun 2008 - May 2019</div>
                 </div>
             </div>
         </div>
@@ -234,7 +306,7 @@
                     </ul>
                     <a href="https://rebinge.vercel.app">Project Link</a>
                 </div>
-                <span class="experience-dates">Sept 2024 - Present</span>
+                <span class="experience-dates">Sept 2024 - Oct 2024</span>
             </div>
             <div class="experience">
                 <div>
@@ -262,7 +334,7 @@
 
         <div class="section">
             <h2><span class="material-icons-outlined">psychology</span>Skills</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start;">
                 <ul>
                     <li>UX/UI Design</li>
                     <li>Human-Computer Interaction (HCI)</li>
@@ -276,7 +348,6 @@
                     <li>Information Architecture</li>
                     <li>Design Systems and UI Components</li>
                     <li>Collaboration with Cross-Functional Teams</li>
-                    <li>Agile Design Process</li>
                     <li>Visual Design and Typography</li>
                     <li>Blog Writing and Technical Communication</li>
                 </ul>
@@ -285,7 +356,7 @@
 
         <div class="section">
             <h2><span class="material-icons-outlined">verified</span>Certifications</h2>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px;">
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
                 <ul>
                     <li>Google Career Certificates - High-Fidelity Prototypes in Figma</li>
                     <li>Google Career Certificates - Foundations of User Experience (UX) Design</li>
