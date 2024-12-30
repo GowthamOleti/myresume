@@ -34,7 +34,7 @@
             align-items: center;
             gap: 15px;
         }
-        .header .profile {
+ .header .profile {
     position: relative;
     width: 100px;
     height: 100px;
@@ -44,15 +44,16 @@
     background: radial-gradient(circle, #d9f1ff, #a3d4f7);
     border-radius: 50%;
     flex-shrink: 0;
-    overflow: hidden; /* Ensures image fits neatly within the circle */
+    overflow: hidden; /* Ensures the image stays within the circle */
 }
 
 .header .profile img {
-    width: 100%; /* Ensures the image scales correctly */
-    height: 100%; /* Ensures the image scales correctly */
-    object-fit: cover; /* Makes sure the image covers the entire circle */
-    display: block; /* Removes any inline spacing */
+    width: auto; /* Maintain the aspect ratio */
+    height: 100%; /* Scale the height to fit the circle */
+    object-fit: cover; /* Ensures the image covers the entire area */
+    display: block; /* Avoid inline spacing issues */
 }
+
 
         .header .main-info {
             display: flex;
