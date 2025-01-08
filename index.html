@@ -131,7 +131,6 @@
             gap: 12px;
             align-items: center;
             margin-bottom: 12px;
-            flex-wrap: wrap;
         }
         .experience-title {
             font-weight: 600;
@@ -140,8 +139,7 @@
             font-size: 14px;
             font-weight: bold;
             color: black;
-            text-align: right;
-            flex-shrink: 0;
+            text-align: left;
         }
         .skills-certifications {
             display: flex;
@@ -182,11 +180,8 @@
                 padding-left: 20px;
             }
             .experience {
-                justify-content: flex-start;
-            }
-            .experience-dates {
-                order: 1;
-                margin-left: auto;
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
