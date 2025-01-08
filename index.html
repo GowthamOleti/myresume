@@ -17,7 +17,7 @@
             background-color: #f9f9f9;
             font-size: 14px;
             color: #1c1c1e;
-            line-height: 1.6; /* Slightly increased line-height */
+            line-height: 1.6;
         }
         .container {
             max-width: 850px;
@@ -34,35 +34,28 @@
             align-items: center;
             gap: 15px;
         }
-.header .profile {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: radial-gradient(circle, #d9f1ff, #a3d4f7);
-    border-radius: 50%;
-    flex-shrink: 0;
-    overflow: hidden; /* Ensures the image stays within the circle */
-}
-
-.header .profile img {
-    width: auto; /* Maintain the aspect ratio */
-    height: 100%; /* Scale the height to fit the circle */
-    object-fit: cover; /* Ensures the image covers the entire area */
-    display: block; /* Avoid inline spacing issues */
-}
-
+        .header .profile {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(circle, #d9f1ff, #a3d4f7);
+            border-radius: 50%;
+            flex-shrink: 0;
+            overflow: hidden;
+        }
+        .header .profile img {
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
         .header .main-info {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 2px;
-        }
-        .header .details {
-            display: flex;
-            flex-direction: column;
             gap: 2px;
         }
         .header h1 {
@@ -72,13 +65,11 @@
             margin: 0;
             display: flex;
             align-items: center;
-            line-height: normal; /* Retain default line-height */
         }
         .header .subtitle {
             font-size: 14px;
             font-weight: 500;
             color: grey;
-            line-height: normal; /* Retain default line-height */
         }
         .header .contact-info {
             display: flex;
@@ -86,10 +77,6 @@
             gap: 6px;
             font-size: 14px;
             color: #888888;
-        }
-        .header .contact-info div {
-            margin-bottom: 1px;
-            line-height: normal; /* Retain default line-height */
         }
         .header .contact-info a {
             color: #007aff;
@@ -106,7 +93,6 @@
             border-bottom: 1px solid #d3d3d3;
             padding-bottom: 3px;
             color: #000000;
-            line-height: 1.4; /* Slightly increased line-height for headings */
         }
         h2 .material-icons-outlined {
             vertical-align: middle;
@@ -120,32 +106,22 @@
             margin-top: 10px;
             margin-bottom: 4px;
             color: #1c1c1e;
-            line-height: 1.4; /* Slightly increased line-height for headings */
-        }
-        a {
-            color: #007aff;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 4px;
-            display: inline-block;
-        }
-        a:hover {
-            text-decoration: underline;
         }
         ul {
             list-style: disc;
-            padding-left: 18px;
+            padding-left: 0;
             margin: 4px 0;
-            line-height: 1.6; /* Slightly increased line-height */
+            line-height: 1.6;
         }
-        li {
-            margin-bottom: 2px;
-            line-height: 1.6; /* Slightly increased line-height */
+        ul li {
+            margin-bottom: 8px;
             color: #333333;
+            padding-left: 20px;
+            text-indent: -20px;
         }
         p {
             margin: 4px 0;
-            line-height: 1.6; /* Slightly increased line-height */
+            line-height: 1.6;
             color: #1c1c1e;
         }
         .section {
@@ -153,7 +129,7 @@
         }
         .experience {
             display: grid;
-            grid-template-columns: auto 150px;
+            grid-template-columns: 1fr;
             gap: 8px;
             align-items: start;
             margin-bottom: 12px;
@@ -162,10 +138,9 @@
             font-weight: 600;
         }
         .experience-dates {
-            font-size: 12px;
+            font-size: 14px;
             font-weight: bold;
             color: black;
-            text-align: right;
         }
         .skills-certifications {
             display: flex;
@@ -189,8 +164,30 @@
         .education-entry .experience-title {
             flex-grow: 1;
         }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .header .main-info {
+                align-items: center;
+            }
+            ul {
+                padding-left: 20px;
+                text-indent: 0;
+            }
+            .experience {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+<body>
 <body>
     <div class="container">
         <div class="header">
