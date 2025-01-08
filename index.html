@@ -129,12 +129,16 @@
             display: flex;
             justify-content: space-between;
             gap: 12px;
-            align-items: center;
+            align-items: baseline;
             margin-bottom: 12px;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
         }
         .experience-title {
             font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
         }
         .experience-dates {
             font-size: 14px;
@@ -142,6 +146,7 @@
             color: black;
             text-align: right;
             flex-shrink: 0;
+            margin-left: auto;
         }
         .skills-certifications {
             display: flex;
@@ -182,10 +187,10 @@
                 padding-left: 20px;
             }
             .experience {
-                justify-content: flex-start;
+                flex-wrap: nowrap;
             }
             .experience-dates {
-                order: 1;
+                white-space: nowrap;
                 margin-left: auto;
             }
         }
