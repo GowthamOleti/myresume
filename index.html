@@ -136,9 +136,9 @@
         .experience-title {
             font-weight: 600;
             display: flex;
-            justify-content: space-between;
+            gap: 5px;
             align-items: baseline;
-            width: 100%;
+            flex-wrap: wrap;
         }
         .experience-dates {
             font-size: 14px;
@@ -147,6 +147,7 @@
             text-align: right;
             flex-shrink: 0;
             margin-left: auto;
+            white-space: nowrap;
         }
         .skills-certifications {
             display: flex;
@@ -168,6 +169,10 @@
             gap: 8px;
         }
         .education-entry .experience-title {
+            display: flex;
+            gap: 5px;
+            align-items: baseline;
+            flex-wrap: wrap;
             flex-grow: 1;
         }
 
