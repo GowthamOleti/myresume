@@ -126,10 +126,10 @@
             margin-top: 15px;
         }
         .experience {
-            display: grid;
-            grid-template-columns: 1fr 150px;
-            gap: 8px;
-            align-items: start;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            align-items: center;
             margin-bottom: 12px;
         }
         .experience-title {
@@ -139,7 +139,7 @@
             font-size: 14px;
             font-weight: bold;
             color: black;
-            text-align: right;
+            text-align: left;
         }
         .skills-certifications {
             display: flex;
@@ -180,12 +180,8 @@
                 padding-left: 20px;
             }
             .experience {
-                grid-template-columns: 1fr;
-            }
-            .experience-dates {
-                text-align: left;
-                margin-top: -6px;
-                font-size: 14px;
+                flex-direction: column;
+                align-items: flex-start;
             }
         }
     </style>
