@@ -1,402 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gowtham Oleti | Resume</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <style>
-        @page {
-            size: A4;
-            margin: 10mm 20mm 20mm 20mm;
-        }
-        body {
-            font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "San Francisco", Roboto, "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            font-size: 14px;
-            color: #1c1c1e;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 850px;
-            margin: 5px auto;
-            background-color: #ffffff;
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-        }
-        .header {
-            text-align: left;
-            padding: 5px 0;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        .header .profile {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: radial-gradient(circle, #d9f1ff, #a3d4f7);
-            border-radius: 50%;
-            flex-shrink: 0;
-            overflow: hidden;
-        }
-        .header .profile img {
-            width: auto;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .header .main-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            gap: 2px;
-        }
-        .header h1 {
-            font-size: 24px;
-            font-weight: bold;
-            color: #1c1c1e;
-            margin: 0;
-            display: flex;
-            align-items: center;
-        }
-        .header .subtitle {
-            font-size: 14px;
-            font-weight: 500;
-            color: grey;
-        }
-        .header .contact-info {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            font-size: 14px;
-            color: #888888;
-        }
-        .header .contact-info a {
-            color: #007aff;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .header .contact-info a:hover {
-            text-decoration: underline;
-        }
-        h2 {
-            font-size: 20px;
-            font-weight: 500;
-            margin-bottom: 6px;
-            border-bottom: 1px solid #d3d3d3;
-            padding-bottom: 3px;
-            color: #000000;
-        }
-        h2 .material-icons-outlined {
-            vertical-align: middle;
-            font-size: 20px;
-            margin-right: 6px;
-            color: #808080;
-        }
-        h3 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-top: 10px;
-            margin-bottom: 4px;
-            color: #1c1c1e;
-        }
-        ul {
-            list-style: disc;
-            padding-left: 20px;
-            margin: 4px 0;
-            line-height: 1.4;
-        }
-        ul li {
-            margin-bottom: 4px;
-            color: #333333;
-        }
-        p {
-            margin: 4px 0;
-            line-height: 1.6;
-            color: #1c1c1e;
-        }
-        .section {
-            margin-top: 15px;
-        }
-        .experience {
-            display: flex;
-            justify-content: space-between;
-            gap: 12px;
-            align-items: baseline;
-            margin-bottom: 12px;
-            flex-wrap: nowrap;
-        }
-        .experience-title {
-            font-weight: 600;
-            display: flex;
-            gap: 5px;
-            align-items: baseline;
-            flex-wrap: wrap;
-        }
-        .experience-dates {
-            font-size: 14px;
-            font-weight: bold;
-            color: black;
-            text-align: right;
-            flex-shrink: 0;
-            margin-left: auto;
-            white-space: nowrap;
-        }
-        .skills-certifications {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        .certification {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .education-entry {
-            margin-bottom: 8px;
-        }
-        .education-entry .experience {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            gap: 8px;
-        }
-        .education-entry .experience-title {
-            display: flex;
-            gap: 5px;
-            align-items: baseline;
-            flex-wrap: wrap;
-            flex-grow: 1;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Gowtham Oleti - Product Designer Resume showcasing expertise in UX/UI, product design, and innovative problem-solving." />
+  <title>Gowtham Oleti | Resume</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+  <style>
+    /* Page Setup */
+    @page {
+      size: A4;
+      margin: 10mm 20mm 20mm 20mm;
+    }
 
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            .header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .header .main-info {
-                align-items: center;
-            }
-            ul {
-                padding-left: 20px;
-            }
-            .experience {
-                flex-wrap: nowrap;
-            }
-            .experience-dates {
-                white-space: nowrap;
-                margin-left: auto;
-            }
-        }
-    </style>
+    /* Base Reset & Typography */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #F5F5F7;
+      color: #1D1D1F;
+      font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Container */
+    .container {
+      max-width: 850px;
+      margin: 20px auto;
+      background-color: #FFFFFF;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+    .profile {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .profile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .main-info {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .main-info h1 {
+      font-size: 26px;
+      font-weight: 700;
+      margin: 0;
+      color: #1D1D1F;
+    }
+    .subtitle {
+      font-size: 15px;
+      font-weight: 500;
+      color: #6C6C70;
+      margin: 0;
+    }
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      font-size: 14px;
+      color: #6C6C70;
+    }
+    .contact-info a {
+      color: #007AFF;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* Section Headings */
+    h2 {
+      font-size: 18px;
+      font-weight: 600;
+      margin: 32px 0 12px 0;
+      color: #1D1D1F;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    h2 .material-icons-outlined {
+      font-size: 18px;
+      color: #8E8E93;
+    }
+
+    /* Section Content Layout */
+    .section-content {
+      margin-bottom: 24px;
+    }
+    .entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .entry .entry-details {
+      flex: 1;
+    }
+    .entry-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1D1D1F;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+    .entry-subtitle {
+      font-weight: 500;
+      color: #6C6C70;
+    }
+    .entry-dates {
+      font-size: 15px;
+      font-weight: 500;
+      white-space: nowrap;
+      color: #1D1D1F;
+      margin-left: auto;
+    }
+    ul {
+      margin: 8px 0 0 20px;
+      padding: 0;
+    }
+    ul li {
+      margin-bottom: 4px;
+    }
+
+    /* Grid Layouts for Skills and Certifications */
+    .grid-two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .main-info {
+        align-items: center;
+      }
+      .entry {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .entry-dates {
+        margin-top: 4px;
+      }
+    }
+
+    /* Section Separator: Adds a light grey line after each section except the last */
+    .section-content:not(:last-of-type) {
+      border-bottom: 1px solid #D3D3D3;
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="profile">
-                <img src="https://static.wixstatic.com/media/5c0589_f71b4cbdb69f46eda6d6c9126790736c~mv2.png" alt="Profile Picture">
-            </div>
-            <div class="main-info">
-                <div class="details">
-                    <h1 style="display: flex; align-items: center;">
-                        Gowtham Oleti
-                    </h1>
-                    <p class="subtitle">Product Designer</p>
-                </div>
-                <div class="contact-info">
-                    <div>
-                        <span>Email: <a href="mailto:oletigowtham8803@gmail.com">oletigowtham8803@gmail.com</a></span>
-                        <span>Phone: <a href="tel:9848211136">9848211136</a></span>
-                    </div>
-                    <div>
-                        <span>Portfolio: <a href="https://www.gowthamoleti.com" target="_blank">gowthamoleti.com</a></span>
-                        <span>LinkedIn: <a href="https://www.linkedin.com/in/gowthamoleti" target="_blank">linkedin.com/in/gowthamoleti</a></span>
-                    </div>
-                </div>
-            </div>
+  <div class="container">
+    <header>
+      <div class="profile">
+        <img src="https://static.wixstatic.com/media/5c0589_f71b4cbdb69f46eda6d6c9126790736c~mv2.png" alt="Gowtham Oleti Profile Picture" />
+      </div>
+      <div class="main-info">
+        <h1>Gowtham Oleti</h1>
+        <p class="subtitle">Product Designer</p>
+        <div class="contact-info">
+          <div>
+            <span>Email: <a href="mailto:oletigowtham8803@gmail.com">oletigowtham8803@gmail.com</a></span>
+            <span>Phone: <a href="tel:9848211136">9848211136</a></span>
+          </div>
+          <div>
+            <span>Portfolio: <a href="https://www.gowthamoleti.com" target="_blank" rel="noopener noreferrer">gowthamoleti.com</a></span>
+            <span>LinkedIn: <a href="https://www.linkedin.com/in/gowthamoleti" target="_blank" rel="noopener noreferrer">linkedin.com/in/gowthamoleti</a></span>
+          </div>
         </div>
+      </div>
+    </header>
+    <main>
+      <!-- Summary Section -->
+      <section class="section-content">
+        <h2><span class="material-icons-outlined">description</span>Summary</h2>
+        <p>
+          Product Designer specializing in UX/UI with a focus on user-centered design and effective problem-solving. Skilled in creating intuitive, functional products that enhance user experience. Passionate about combining innovative design thinking with technology to build impactful, user-focused solutions.
+        </p>
+      </section>
 
-        <div class="section">
-            <h2><span class="material-icons-outlined">description</span>Summary</h2>
-            <p>
-                Product Designer specializing in UX/UI with a focus on user-centered design and effective problem-solving. Skilled in creating intuitive, functional products that enhance user experience. Passionate about combining innovative design thinking with technology to build impactful and user-focused solutions.
-            </p>
-        </div>
-
-        <div class="section">
-            <h2><span class="material-icons-outlined">work_outline</span>Work Experience</h2>
-            <div class="experience">
-                <div>
-                    <span class="experience-title">Zomato | District by Zomato</span> - <span style='font-weight: 500; color: grey;'>Product Design Intern</span>
-                    <ul>
-                        <li> Designing the District app, which has over 10 million downloads, enhancing movie discovery and user engagement.</li>
-                        <li> One of 18 selected from 18,000 applications in a job post by Deepinder Goyal.</li>
-                    </ul>
-                </div>
-                <span class="experience-dates">Jan 2025 - Present</span>
+      <!-- Work Experience Section -->
+      <section class="section-content">
+        <h2><span class="material-icons-outlined">work_outline</span>Work Experience</h2>
+        <div class="entry">
+          <div class="entry-details">
+            <div class="entry-title">
+              Zomato | District by Zomato <span class="entry-subtitle">Product Design Intern</span>
             </div>
-            <div class="experience">
-                <div>
-                    <span class="experience-title">DiLytics</span> - <span style='font-weight: 500; color: grey;'>UI/UX Designer</span>
-                    <ul>
-                        <li>Collaborated with the Slash team to design the Slash app, a platform connecting users with local professionals to access a variety of services seamlessly.</li>
-                        <li>Designed a loyalty program aimed at maximizing customer retention and engagement.</li>
-                    </ul>
-                </div>
-                <span class="experience-dates">Dec 2024 - Jan 2025</span>
-            </div>
-            <div class="experience">
-                <div>
-                    <span class="experience-title">Mouse & Cheese Design Studio</span> - <span style='font-weight: 500; color: grey;'>Product Design Intern</span>
-                    <ul>
-                        <li>Assessed and redesigned interfaces of existing mobile applications and websites such as news applications, E-Commerce, and more.</li>
-                        <li>Focused on user journey, behavior, and interactions to identify and solve design problems.</li>
-                    </ul>
-                </div>
-                <span class="experience-dates">June 2024 - Nov 2024</span>
-            </div>
-            <div class="experience">
-                <div>
-                    <span class="experience-title">Evaltrix</span> - AI Assessment Platform - <span style='font-weight: 500; color: grey;'>Product Design Intern</span>
-                    <ul>
-                        <li>Focused on interface design improvements, reducing the UI scanning time by 3 seconds.</li>
-                        <li>Conducted usability testing to enhance user experience.</li>
-                        <li>Designed Generative AI features to generate questions for assessments, improving efficiency by 80%.</li>
-                    </ul>
-                </div>
-                <span class="experience-dates">Jan 2024 - June 2024</span>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2><span class="material-icons-outlined">school</span>Education</h2>
-            <div class="education-entry">
-                <div class="experience">
-                    <div class="experience-title">
-                        Lovely Professional University - <span style="font-weight: 500; color: grey;">B.Des Product Design (Grade: 8.4)</span>
-                    </div>
-                    <div class="experience-dates">Aug 2021 - Apr 2025</div>
-                </div>
-            </div>
-            <div class="education-entry">
-                <div class="experience">
-                    <div class="experience-title">
-                        Sri Chaitanya College of Education - <span style="font-weight: 500; color: grey;">Intermediate, MPC</span>
-                    </div>
-                    <div class="experience-dates">Jun 2019 - May 2021</div>
-                </div>
-            </div>
-            <div class="education-entry">
-                <div class="experience">
-                    <div class="experience-title">
-                        Sanghamitra School - <span style="font-weight: 500; color: grey;">CBSE</span>
-                    </div>
-                    <div class="experience-dates">Jun 2008 - May 2019</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2><span class="material-icons-outlined">folder_open</span>Notable Projects</h2>
-            <div class="experience">
-                <div>
-                    <span class="experience-title">ReBinge</span> - <span style='font-weight: 500; color: grey;'>TV Show Episode Picker</span>
-                    <ul>
-                        <li>ReBinge randomly selects episodes from your favorite sitcoms, removing the hassle of choosing.</li>
-                        <li>Provides direct links to episodes, enhanced with clips using the TVMaze API for a dynamic viewing experience.</li>
-                    </ul>
-                    <a href="https://rebinge.vercel.app">Project Link</a>
-                </div>
-                <span class="experience-dates">Sept 2024 - Oct 2024</span>
-            </div>
-            <div class="experience">
-                <div>
-                    <span class="experience-title">Archives By Gow</span> - <span style='font-weight: 500; color: grey;'>Resource Hub</span>
-                    <ul>
-                        <li>Created a platform offering resources like videos, podcasts, tools, and blogs.</li>
-                        <li>Focused on influential figures in design and tech.</li>
-                    </ul>
-                    <a href="https://www.archivesbygow.com">Project Link</a>
-                </div>
-                <span class="experience-dates">July 2024 - Sept 2024</span>
-            </div>
-            <div class="experience">
-                <div>
-                    <span class="experience-title">Text Craft</span> - <span style='font-weight: 500; color: grey;'>AI Text Summariser App</span>
-                    <ul>
-                        <li>Designed an AI-powered app that efficiently summarizes lengthy texts.</li>
-                        <li>Beta tested with 150 users to gather feedback and improve functionality.</li>
-                    </ul>
-                    <a href="https://play.google.com/store/apps/details?id=com.tk.textcraft">Project Link</a>
-                </div>
-                <span class="experience-dates">June 2023 - Sept 2023</span>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2><span class="material-icons-outlined">psychology</span>Skills</h2>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start;">
-                <ul>
-                    <li>UX/UI Design</li>
-                    <li>Human-Computer Interaction (HCI)</li>
-                    <li>Responsive and Adaptive Design Principles</li>
-                    <li>Usability Testing</li>
-                    <li>Generative AI Integration in Design</li>
-                    <li>Wireframing and Prototyping (Figma, Sketch)</li>
-                </ul>
-                <ul>
-                    <li>Interaction Design</li>
-                    <li>Information Architecture</li>
-                    <li>Design Systems and UI Components</li>
-                    <li>Collaboration with Cross-Functional Teams</li>
-                    <li>Visual Design and Typography</li>
-                    <li>Blog Writing and Technical Communication</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2><span class="material-icons-outlined">verified</span>Certifications</h2>
-            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;">
-                <ul>
-                    <li>Google Career Certificates - High-Fidelity Prototypes in Figma</li>
-                    <li>Google Career Certificates - Foundations of User Experience (UX) Design</li>
-                    <li>Google Career Certificates - Build Wireframes and Low-Fidelity Prototypes</li>
-                    <li>Google Career Certificates - Start the UX Design Process: Empathize, Define, and Ideate</li>
-                    <li>Google Career Certificates - Introduction to Augmented Reality and ARCore</li>
-                    <li>University of Michigan - User Experience and Interaction Design</li>
-                </ul>
-                <ul>
-                    <li>IBM - Introduction to Artificial Intelligence</li>
-                    <li>IBM - Building AI Powered Chatbots Without Programming</li>
-                    <li>Meta - Introduction to Mobile Development</li>
-                    <li>Meta - Front-End Development</li>
-                    <li>Meta - Introduction to Augmented Reality</li>
-                    <li>Google - Introduction to Generative AI</li>
-                    <li>Coursera - Create a No-code Responsive Website with Webflow</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2><span class="material-icons-outlined">translate</span>Languages</h2>
             <ul>
-                <li>Telugu: Native Proficiency</li>
-                <li>English: Professional Proficiency</li>
-                <li>Hindi: Professional Proficiency</li>
+              <li>Designed the District app (10M+ downloads) for enhanced movie discovery and engagement.</li>
+              <li>One of 18 selected from 18,000 applications in a post by Deepinder Goyal.</li>
             </ul>
+          </div>
+          <div class="entry-dates">Jan 2025 - Present</div>
         </div>
-    </div>
+        <div class="entry">
+          <div class="entry-details">
+            <div class="entry-title">
+              DiLytics <span class="entry-subtitle">UI/UX Designer</span>
+            </div>
+            <ul>
+              <li>Collaborated on the Slash app, connecting users to local professionals for seamless service access.</li>
+              <li>Designed a loyalty program to maximize customer retention and engagement.</li>
+            </ul>
+          </div>
+          <div class="entry-dates">Dec 2024 - Jan 2025</div>
+        </div>
+        <div class="entry">
+          <div class="entry-details">
+            <div class="entry-title">
+              Mouse & Cheese Design Studio <span class="entry-subtitle">Product Design Intern</span>
+            </div>
+            <ul>
+              <li>Redesigned existing mobile apps and websites (news, e-commerce, etc.) to improve user journeys.</li>
+              <li>Analyzed user behavior and interactions to identify pain points and guide solutions.</li>
+            </ul>
+          </div>
+          <div class="entry-dates">June 2024 - Nov 2024</div>
+        </div>
+        <div class="entry">
+          <div class="entry-details">
+            <div class="entry-title">
+              Evaltrix <span class="entry-subtitle">Product Design Intern</span>
+            </div>
+            <ul>
+              <li>Optimized interface design to reduce UI scanning time by 3 seconds.</li>
+              <li>Led usability testing to refine the overall user experience.</li>
+              <li>Developed Generative AI features for rapid question generation, boosting efficiency by 80%.</li>
+            </ul>
+          </div>
+          <div class="entry-dates">Jan 2024 - June 2024</div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section class="section-content">
+        <h2><span class="material-icons-outlined">school</span>Education</h2>
+        <div class="entry">
+          <div class="entry-details">
+            <div class="entry-title">
+              Lovely Professional University <span class="entry-subtitle">B.Des Product Design (Grade: 8.4)</span>
+            </div>
+          </div>
+          <div class="entry-dates">Aug 2021 - Apr 2025</div>
+        </div>
+        <div class="entry">
+          <div class="entry-details">
+            <div class="entry-title">
+              Sri Chaitanya College of Education <span class="entry-subtitle">Intermediate, MPC</span>
+            </div>
+          </div>
+          <div class="entry-dates">Jun 2019 - May 2021</div>
+        </div>
+        <div class="entry">
+          <div class="entry-details">
+            <div class="entry-title">
+              Sanghamitra School <span class="entry-subtitle">CBSE</span>
+            </div>
+          </div>
+          <div class="entry-dates">Jun 2008 - May 2019</div>
+        </div>
+      </section>
+
+      <!-- Notable Projects Section -->
+      <section class="section-content">
+        <h2><span class="material-icons-outlined">folder_open</span>Notable Projects</h2>
+        <div class="entry">
+          <div class="entry-details">
+            <div class="entry-title">
+              ReBinge <span class="entry-subtitle">TV Show Episode Picker</span>
+            </div>
+            <ul>
+              <li>Randomly selects sitcom episodes to ease decision-making.</li>
+              <li>Uses TVMaze API for direct episode links and dynamic clips.</li>
+            </ul>
+            <a class="project-link" href="https://rebinge.vercel.app" target="_blank" rel="noopener noreferrer">Project Link</a>
+          </div>
+          <div class="entry-dates">Sept 2024 - Oct 2024</div>
+        </div>
+        <div class="entry">
+          <div class="entry-details">
+            <div class="entry-title">
+              Archives By Gow <span class="entry-subtitle">Resource Hub</span>
+            </div>
+            <ul>
+              <li>Provides videos, podcasts, tools, and blogs focused on notable figures in design/tech.</li>
+            </ul>
+            <a class="project-link" href="https://www.archivesbygow.com" target="_blank" rel="noopener noreferrer">Project Link</a>
+          </div>
+          <div class="entry-dates">July 2024 - Sept 2024</div>
+        </div>
+        <div class="entry">
+          <div class="entry-details">
+            <div class="entry-title">
+              Text Craft <span class="entry-subtitle">AI Text Summariser App</span>
+            </div>
+            <ul>
+              <li>Summarizes lengthy texts using AI for rapid review.</li>
+              <li>Beta tested with 150+ users for functionality improvements.</li>
+            </ul>
+            <a class="project-link" href="https://play.google.com/store/apps/details?id=com.tk.textcraft" target="_blank" rel="noopener noreferrer">Project Link</a>
+          </div>
+          <div class="entry-dates">June 2023 - Sept 2023</div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section-content">
+        <h2><span class="material-icons-outlined">psychology</span>Skills</h2>
+        <div class="grid-two">
+          <ul>
+            <li>UX/UI Design</li>
+            <li>Human-Computer Interaction (HCI)</li>
+            <li>Responsive & Adaptive Design</li>
+            <li>Usability Testing</li>
+            <li>Generative AI Integration</li>
+            <li>Wireframing & Prototyping (Figma, Sketch)</li>
+          </ul>
+          <ul>
+            <li>Interaction Design</li>
+            <li>Information Architecture</li>
+            <li>Design Systems & UI Components</li>
+            <li>Cross-Functional Collaboration</li>
+            <li>Visual Design & Typography</li>
+            <li>Blog Writing & Technical Communication</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Certifications Section -->
+      <section class="section-content">
+        <h2><span class="material-icons-outlined">verified</span>Certifications</h2>
+        <div class="grid-two">
+          <ul>
+            <li>Google Career Certificates - High-Fidelity Prototypes in Figma</li>
+            <li>Google Career Certificates - Foundations of UX Design</li>
+            <li>Google Career Certificates - Build Wireframes/Low-Fidelity Prototypes</li>
+            <li>Google Career Certificates - Empathize, Define, & Ideate</li>
+            <li>Google Career Certificates - Intro to Augmented Reality & ARCore</li>
+            <li>University of Michigan - User Experience & Interaction Design</li>
+          </ul>
+          <ul>
+            <li>IBM - Introduction to Artificial Intelligence</li>
+            <li>IBM - Building AI Powered Chatbots Without Programming</li>
+            <li>Meta - Introduction to Mobile Development</li>
+            <li>Meta - Front-End Development</li>
+            <li>Meta - Introduction to Augmented Reality</li>
+            <li>Google - Introduction to Generative AI</li>
+            <li>Coursera - Create a No-code Responsive Website with Webflow</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Languages Section -->
+      <section class="section-content">
+        <h2><span class="material-icons-outlined">translate</span>Languages</h2>
+        <ul>
+          <li>Telugu: Native Proficiency</li>
+          <li>English: Professional Proficiency</li>
+          <li>Hindi: Professional Proficiency</li>
+        </ul>
+      </section>
+    </main>
+  </div>
 </body>
 </html>
