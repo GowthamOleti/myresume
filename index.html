@@ -86,7 +86,7 @@
       text-decoration: underline;
     }
 
-    /* Section Headings */
+    /* Section Headings with Emojis */
     h2 {
       font-size: 18px;
       font-weight: 600;
@@ -103,7 +103,7 @@
 
     /* Section Content Layout */
     .section-content {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
     }
     .entry {
       display: flex;
@@ -122,6 +122,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 4px;
+      align-items: center;
     }
     .entry-subtitle {
       font-weight: 500;
@@ -168,11 +169,45 @@
       }
     }
 
-    /* Section Separator: Adds a light grey line after each section except the last */
+    /* Section Separator: Reduced spacing with a light grey line */
     .section-content:not(:last-of-type) {
       border-bottom: 1px solid #D3D3D3;
-      padding-bottom: 24px;
-      margin-bottom: 24px;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+
+    /* Radar Animation for Zomato */
+    .radar {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-color: #28a745;
+      border-radius: 50%;
+      margin-right: 8px;
+      position: relative;
+    }
+    .radar::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      border: 2px solid #28a745;
+      border-radius: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+      animation: radarPulse 2s infinite;
+    }
+    @keyframes radarPulse {
+      0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(2);
+        opacity: 0;
+      }
     }
   </style>
 </head>
@@ -200,7 +235,7 @@
     <main>
       <!-- Summary Section -->
       <section class="section-content">
-        <h2><span class="material-icons-outlined">description</span>Summary</h2>
+        <h2>📝 Summary</h2>
         <p>
           Product Designer specializing in UX/UI with a focus on user-centered design and effective problem-solving. Skilled in creating intuitive, functional products that enhance user experience. Passionate about combining innovative design thinking with technology to build impactful, user-focused solutions.
         </p>
@@ -208,11 +243,11 @@
 
       <!-- Work Experience Section -->
       <section class="section-content">
-        <h2><span class="material-icons-outlined">work_outline</span>Work Experience</h2>
+        <h2>💼 Work Experience</h2>
         <div class="entry">
           <div class="entry-details">
             <div class="entry-title">
-              Zomato | District by Zomato <span class="entry-subtitle">Product Design Intern</span>
+              <span class="radar"></span> Zomato | District by Zomato <span class="entry-subtitle">Product Design Intern</span>
             </div>
             <ul>
               <li>Designed the District app (10M+ downloads) for enhanced movie discovery and engagement.</li>
@@ -262,7 +297,7 @@
 
       <!-- Education Section -->
       <section class="section-content">
-        <h2><span class="material-icons-outlined">school</span>Education</h2>
+        <h2>🎓 Education</h2>
         <div class="entry">
           <div class="entry-details">
             <div class="entry-title">
@@ -291,7 +326,7 @@
 
       <!-- Notable Projects Section -->
       <section class="section-content">
-        <h2><span class="material-icons-outlined">folder_open</span>Notable Projects</h2>
+        <h2>📁 Notable Projects</h2>
         <div class="entry">
           <div class="entry-details">
             <div class="entry-title">
@@ -334,7 +369,7 @@
 
       <!-- Skills Section -->
       <section class="section-content">
-        <h2><span class="material-icons-outlined">psychology</span>Skills</h2>
+        <h2>🎨 Skills</h2>
         <div class="grid-two">
           <ul>
             <li>UX/UI Design</li>
@@ -357,7 +392,7 @@
 
       <!-- Certifications Section -->
       <section class="section-content">
-        <h2><span class="material-icons-outlined">verified</span>Certifications</h2>
+        <h2>✅ Certifications</h2>
         <div class="grid-two">
           <ul>
             <li>Google Career Certificates - High-Fidelity Prototypes in Figma</li>
@@ -381,7 +416,7 @@
 
       <!-- Languages Section -->
       <section class="section-content">
-        <h2><span class="material-icons-outlined">translate</span>Languages</h2>
+        <h2>🗣 Languages</h2>
         <ul>
           <li>Telugu: Native Proficiency</li>
           <li>English: Professional Proficiency</li>
