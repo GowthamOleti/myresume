@@ -154,11 +154,21 @@
     @media (max-width: 768px) {
       header {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
       }
       .main-info {
-        align-items: center;
+        align-items: flex-start;
+      }
+      .contact-info {
+        display: block;
+      }
+      .contact-info div {
+        margin-bottom: 8px;
+      }
+      .project-link {
+        display: block;
+        margin-top: 8px;
       }
       .entry {
         flex-direction: column;
@@ -223,10 +233,12 @@
         <div class="contact-info">
           <div>
             <span>Email: <a href="mailto:oletigowtham8803@gmail.com">oletigowtham8803@gmail.com</a></span>
+            <br>
             <span>Phone: <a href="tel:9848211136">9848211136</a></span>
           </div>
           <div>
             <span>Portfolio: <a href="https://www.gowthamoleti.com" target="_blank" rel="noopener noreferrer">gowthamoleti.com</a></span>
+            <br>
             <span>LinkedIn: <a href="https://www.linkedin.com/in/gowthamoleti" target="_blank" rel="noopener noreferrer">linkedin.com/in/gowthamoleti</a></span>
           </div>
         </div>
